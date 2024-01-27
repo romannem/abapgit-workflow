@@ -1,0 +1,18 @@
+
+unmanaged implementation in class zbp_ddl_settlement unique;
+strict ( 2 );
+
+define behavior for Z_DDL_SETTLEMENT alias Settl
+//persistent table <???>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  //create;
+  //update;
+  //delete;
+// field ( readonly ) CompanyCode, fiscalyear, AccountingDocument, AccountingDocumentItem;
+
+  action ( features : instance ) acceptNext result [1] $self;
+
+}

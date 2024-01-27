@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definicia k Custom Settl'
+define service ZSD_CUSTOM_SETTL {
+  expose ZI_CUSTOM_SETTL;
+}

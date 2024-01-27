@@ -1,0 +1,11 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_DDL_SETTLEMENT alias Settl
+{
+  //use create;
+  //use update;
+  //use delete;
+
+  use action acceptNext;
+}

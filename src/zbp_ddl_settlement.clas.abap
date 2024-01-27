@@ -1,0 +1,5 @@
+CLASS zbp_ddl_settlement DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF z_ddl_settlement.
+ENDCLASS.
+
+CLASS zbp_ddl_settlement IMPLEMENTATION.
+ENDCLASS.

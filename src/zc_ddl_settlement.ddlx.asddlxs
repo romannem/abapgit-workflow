@@ -1,0 +1,68 @@
+//@Metadata.layer: layer
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Zapocty',
+                typeNamePlural: 'Zapocty',
+                title: { type: #STANDARD, label: 'Zapocty', value: 'CompanyCode' } },
+  presentationVariant: [{ sortOrder: [{ by: 'CompanyCode', direction:  #DESC }] }] }
+
+    
+annotate view ZC_DDL_SETTLEMENT
+    with 
+{
+//@UI.facet: [{ type: #IDENTIFICATION_REFERENCE }]
+
+  @UI.facet: [ { id:            'Prop',
+                 purpose:       #STANDARD,
+                 type:          #IDENTIFICATION_REFERENCE,
+                 label:         'Zoznam zápočtov',
+                 position:      10 }  ]
+                 
+   @UI: {  lineItem:        [ { position: 10 } ],
+            identification: [ { position: 10 } ],
+            selectionField: [ { position: 10 } ] }  
+    CompanyCode;
+
+   @UI: {  lineItem:        [ { position: 20 } ],
+            identification: [ { position: 20 } ],
+            selectionField: [ { position: 20 } ] }  
+    AccountingDocument;
+    
+   @UI: {  lineItem:        [ { position: 30 } ],
+            identification: [ { position: 30 } ],
+            selectionField: [ { position: 30 } ] }  
+    Customer;
+
+   @UI: {  lineItem:  [ { position: 40 },
+                        { type: #FOR_ACTION, dataAction: 'acceptNext', label: 'Akcia' } ],   
+            identification: [ { position: 40 },
+                        { type: #FOR_ACTION, dataAction: 'acceptNext', label: 'Akcias' } ],               
+            selectionField: [ { position: 40 } ] }  
+    ClearingJournalEntry;        
+
+   @UI: {  lineItem:        [ { position: 50 } ],
+            identification: [ { position: 50 } ],
+            selectionField: [ { position: 50 } ] }  
+    FiscalYear;
+
+   @UI: {  lineItem:        [ { position: 60 } ],
+            identification: [ { position: 60 } ] }  
+    AccountingDocumentItem;
+
+   @UI: {  lineItem:        [ { position: 70 } ],
+            identification: [ { position: 70 } ] }  
+    ChartOfAccounts;
+    
+   @UI: {  lineItem:        [ { position: 80 } ],
+            identification: [ { position: 80 } ] }  
+    ClearingDate;
+    
+   @UI: {  lineItem:        [ { position: 90 } ],
+            identification: [ { position: 90 } ] }  
+    ClearingCreationDate;
+    
+   @UI: {  lineItem:        [ { position: 100 } ],
+            identification: [ { position: 100 } ] }
+   ClearingJournalEntryFiscalYear;
+
+}

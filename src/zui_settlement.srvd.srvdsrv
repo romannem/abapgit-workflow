@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition - generování Zápočtů'
+define service ZUI_SETTLEMENT {
+  expose ZC_DDL_SETTLEMENT;
+}
