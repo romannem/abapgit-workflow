@@ -11,7 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_custom_settlement IMPLEMENTATION.
+CLASS ZCL_CUSTOM_SETTLEMENT IMPLEMENTATION.
+
+
   METHOD if_rap_query_provider~select.
     IF io_request->is_data_requested( ).
 
@@ -52,5 +54,4 @@ CLASS zcl_custom_settlement IMPLEMENTATION.
 
     ENDIF.
   ENDMETHOD.
-
 ENDCLASS.

@@ -1,5 +1,5 @@
 unmanaged implementation in class zbp_i_custom_settl unique;
-//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
 
 define behavior for ZI_CUSTOM_SETTL //alias <alias_name>
 //late numbering
@@ -13,6 +13,7 @@ authorization master ( instance )
 //  delete;
   field ( readonly ) CompanyCode, ClearingJournalEntry;
 
+//action ( features : instance ) acceptNext result [0..*] $self;
     action ( features : instance ) acceptNext result [1] $self;
 
   }

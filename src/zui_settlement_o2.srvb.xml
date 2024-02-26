@@ -38,6 +38,12 @@
        <TYPE>application/vnd.sap.adt.businessservices.semanticversion.v1+xml</TYPE>
        <TITLE>SemanticVersion</TITLE>
       </item>
+      <item>
+       <HREF>./zui_settlement_o2</HREF>
+       <REL>http://www.sap.com/adt/relations/source</REL>
+       <TYPE>text/html</TYPE>
+       <TITLE>Landing Page (HTML)</TITLE>
+      </item>
      </LINKS>
      <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
      <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
@@ -54,6 +60,7 @@
        <SERVICE_CONTENT>
         <item>
          <SERVICE_VERSION>0001</SERVICE_VERSION>
+         <SERVICE_PATCH_VERSION>1</SERVICE_PATCH_VERSION>
          <RELEASE_STATE>NOT_RELEASED</RELEASE_STATE>
          <SRVD_REF>
           <URI>/sap/bc/adt/ddic/srvd/sources/zui_settlement</URI>

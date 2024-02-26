@@ -14,5 +14,6 @@ authorization master ( instance )
 // field ( readonly ) CompanyCode, fiscalyear, AccountingDocument, AccountingDocumentItem;
 
   action ( features : instance ) acceptNext result [1] $self;
+////  action ( features : instance ) acceptNext result [0..*] $self;
 
 }

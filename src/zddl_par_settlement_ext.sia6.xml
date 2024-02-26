@@ -27,6 +27,7 @@
       <SRVC_NAME>EFC3F18C3BC5650DD7AD1D66D7ACBA</SRVC_NAME>
       <SRVC_TYPE>HT</SRVC_TYPE>
       <UIAD_SRC>ZC_DDL_SETTL_UI5R</UIAD_SRC>
+      <TEXT>Serv.binding Genrovani zapoctu</TEXT>
       <TYPE_TEXT>OData V2</TYPE_TEXT>
      </item>
     </SERVICE>

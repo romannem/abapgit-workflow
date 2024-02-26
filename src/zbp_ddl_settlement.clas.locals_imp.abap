@@ -41,7 +41,7 @@ CLASS lhc_z_ddl_settlement IMPLEMENTATION.
     " Read the travel status of the existing travels
     READ ENTITIES OF Z_DDL_SETTLEMENT IN LOCAL MODE
       ENTITY Settl
-        FIELDS ( ClearingJournalEntry ) WITH CORRESPONDING #( keys )
+        FIELDS ( AccountingDocument ) WITH CORRESPONDING #( keys )
       RESULT DATA(udaje)
       FAILED failed.
 
@@ -76,6 +76,20 @@ CLASS lhc_z_ddl_settlement IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD acceptnext.
+
+    LOOP AT keys ASSIGNING FIELD-SYMBOL(<lfs_key>).
+
+      TRY.
+
+          zcl_settlement=>generate_settlement( io_settlement = <lfs_key>-accountingdocument ).
+
+        CATCH cx_web_http_client_error.
+        CATCH cx_http_dest_provider_error.
+      ENDTRY.
+
+    ENDLOOP.
+
+
   ENDMETHOD.
 
 ENDCLASS.
